@@ -10,9 +10,9 @@ export default function reviewReducer(state = initialState.reviewState, action) 
   // let newState;
 
   switch (action.type) {
-    // case SAVE_REVIEW:
-      // console.log(state);
-      // return state;
+    case SAVE_REVIEW:
+      console.log(state);
+      return state;
   
     default:
       return state; 
