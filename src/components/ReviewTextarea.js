@@ -3,10 +3,10 @@ import React, {PropTypes} from 'react';
 const ReviewTextarea = (props) => {
   return (
     <textarea
-      className="medium"
-      placeholder={props.placeholder}>
-      {props.value}
-      </textarea>
+      className="large"
+      placeholder={props.placeholder}
+      defaultValue={props.value}
+      />
   );
 };
 

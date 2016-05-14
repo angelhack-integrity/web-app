@@ -1,1 +1,1 @@
-export const SUBMIT_REVIEW = 'SUBMIT_REVIEW';
+export const SAVE_REVIEW = 'SAVE_REVIEW';

@@ -9,22 +9,23 @@ class AddReviewForm extends React.Component {
   }  
 
   save() {
-    this.props.saveReview(this.props.saveReview);
+    this.props.saveReview(this.props.reviewState);
   }
 
   render() {
-    const {saveReview} = this.props;
+    const {reviewState} = this.props;
 
     return (
       <div>
         <h2>What did you think about the service you just witnessed ? </h2>
         <table>
           <tbody>
+          
           <tr>
             <td><label htmlFor="reviewText">Review</label></td>
-            <td><ReviewTextarea name="reviewText" value={saveReview.reviewText}/>
+            <td><ReviewTextarea name="reviewText" value={reviewState.reviewText}/>
             </td>
-          </tr>
+          </tr>          
           </tbody>
         </table>
 
@@ -37,7 +38,8 @@ class AddReviewForm extends React.Component {
 }
 
 AddReviewForm.propTypes = {
-  saveReview: PropTypes.func.isRequired
+  saveReview: PropTypes.func.isRequired,
+  reviewState: PropTypes.object.isRequired
 };
 
 export default AddReviewForm;

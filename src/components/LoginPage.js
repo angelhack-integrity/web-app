@@ -2,8 +2,8 @@ import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 
 const responseFacebook = (response) => {
-  console.log(response);
-}
+  console.log(response); //todo save state
+};
 
 const LoginPage = () => {
   return (
@@ -12,7 +12,7 @@ const LoginPage = () => {
         autoLoad={true}
         callback={responseFacebook}
         icon="fa-facebook" />
-  )
+  );
 };
 
 export default LoginPage;
