@@ -1,10 +1,8 @@
-import { combineReducers, applyMiddleware } from 'redux';
+import { combineReducers } from 'redux';
 import reviewState from './reviewReducer';
-import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
-   reviewState,
-   applyMiddleware(thunk)
+  reviewState
 });
 
 export default rootReducer;
