@@ -16,6 +16,7 @@ let styles = {
     },
     submitStyle: {
       marginTop: 32,
+      marginLeft: 80,
       margin: 'auto'
     },
     dividerStyle: {
