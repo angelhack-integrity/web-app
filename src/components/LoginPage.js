@@ -11,6 +11,7 @@ const LoginPage = () => {
         appId="1604112079901556"
         autoLoad={true}
         callback={responseFacebook}
+        size="small"
         icon="fa-facebook" />
   );
 };

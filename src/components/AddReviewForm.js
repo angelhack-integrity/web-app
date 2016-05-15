@@ -1,7 +1,27 @@
 import React, {PropTypes} from 'react';
-import ReviewTextarea from './ReviewTextarea';
+import Formsy from 'formsy-react';
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Paper from 'material-ui/Paper';
+import { FormsyText } from 'formsy-material-ui/lib';
+import LoginPage from './LoginPage';
+import RaisedButton from 'material-ui/RaisedButton';
+
+let styles = {
+    paperStyle: {
+      width: 300,
+      margin: 'auto',
+      padding: 20,
+    },
+    submitStyle: {
+      marginTop: 32,
+      margin: 'auto'
+    },
+  }
 
 class AddReviewForm extends React.Component {
+  
+
   constructor(props, context) {
     super(props, context);
 
@@ -10,29 +30,42 @@ class AddReviewForm extends React.Component {
 
   save() {
     this.props.saveReview(this.props.reviewState);
-  }
+  }  
 
   render() {
     const {reviewState} = this.props;
 
     return (
-      <div>
-        <h2>What did you think about the service you just witnessed ? </h2>
-        <table>
-          <tbody>
-          
-          <tr>
-            <td><label htmlFor="reviewText">Review</label></td>
-            <td><ReviewTextarea name="reviewText" value={reviewState.reviewText}/>
-            </td>
-          </tr>          
-          </tbody>
-        </table>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <Paper style={styles.paperStyle}>
+          <Formsy.Form
+            onValid={this.enableButton}
+            onInvalid={this.disableButton}
+            onValidSubmit={this.submitForm}
+            onInvalidSubmit={this.notifyFormError}
+          >
+            <FormsyText
+              name="reviewText"
+              validations="isWords"
+              required
+              hintText="What did you think about me ?"
+              floatingLabelText="What did you think about me ?"
+              value={reviewState.reviewText}
+            />
+            <RaisedButton
+              onclick={this.save}
+              type="submit"
+              label="Submit"
+              style={styles.submitStyle}
+            />
 
-        <hr/>
+            <hr />
 
-        <input type="submit" value="Save" onClick={this.save}/>
-      </div>
+            <LoginPage />
+            
+          </Formsy.Form>          
+        </Paper>        
+      </MuiThemeProvider>
     );
   }
 }

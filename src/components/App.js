@@ -9,9 +9,7 @@ const App = (props) => {
     <div>
       <IndexLink to="/">Home</IndexLink>
       {' | '}
-      <Link to="/add-review">Add a review</Link>
-      {' | '}
-      <Link to="/login">Login</Link>
+      <Link to="/add-review">Add a review</Link>          
       {' | '}
       <Link to="/about">About</Link>
       <br/>
