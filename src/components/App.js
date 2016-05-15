@@ -13,7 +13,7 @@ let styles = {
       textAlign: 'center',
       cssFloat: 'left'
     }
-  }
+};
 
 const App = (props) => {
   return (
