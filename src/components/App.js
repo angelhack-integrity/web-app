@@ -8,8 +8,7 @@ import { Menu, MenuItem, Paper } from 'material-ui';
 let styles = {
     menuStyle: {
       width: 300,
-      margin: 'auto',
-      padding: 20,
+      marginLeft: 30,
       textAlign: 'center',
       cssFloat: 'left'
     },
