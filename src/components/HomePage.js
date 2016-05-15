@@ -24,27 +24,31 @@ const HomePage = () => {
       <List>
       <Subheader>Recent reviews</Subheader>
       <ListItem
-        primaryText="Brendan Lim"
+        primaryText="Colin Sabin"
+        secondaryText="Was very impressed with the service I got. You made a very difficult time easier to cope with. Left it all to you and you did a brilliant job  thankyou. My dad would've been proud of the way you looked after him. Thankyou very much xx "
         leftAvatar={<Avatar src="https://placekitten.com/200/100" />}
         rightIcon={<SocialSentimentVerySatisfied />}
       />
       <ListItem
-        primaryText="Eric Hoffman"
+        primaryText="Neil Wakefield"
+        secondaryText="Excellent service, very proficient & very friendly"
         leftAvatar={<Avatar src="https://placekitten.com/100/100" />}
         rightIcon={<SocialSentimentVeryDissatisfied />}
       />
       <ListItem
-        primaryText="Grace Ng"
+        primaryText="Michael Whittaker"
+        secondaryText="compassionate understanding always willing to help, very friendly staff at at all times."
         leftAvatar={<Avatar src="https://placekitten.com/200/300" />}
         rightIcon={<SocialSentimentVerySatisfied />}
       />
       <ListItem
-        primaryText="Kerem Suer"
+        primaryText="Paul Ellis"
+        secondaryText="Very Good"
         leftAvatar={<Avatar src="https://placekitten.com/250/300" />}
-        rightIcon={<SocialSentimentVerySatisfied />}
+        rightIcon={<SocialSentimentVeryDissatisfied />}
       />
       <ListItem
-        primaryText="Raquel Parrado"
+        primaryText="Kate Kumra"
         leftAvatar={<Avatar src="https://placekitten.com/100/300" />}
         rightIcon={<SocialSentimentVeryDissatisfied />}
       />
