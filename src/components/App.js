@@ -15,6 +15,9 @@ let styles = {
     menuContainer: {
       width: 200,
       margin: 'auto'
+    },
+    linkStyle: {
+      textDecoration: 'none'
     }
 };
 
@@ -25,13 +28,13 @@ const App = (props) => {
     <Paper style={styles.menuContainer}>
       <Menu desktop={true} autoWidth={false} style={styles.menuStyle}>
         <MenuItem>
-          <IndexLink to="/">Home</IndexLink>
+          <IndexLink to="/" style={styles.linkStyle}>Home</IndexLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/add-review">Add a review</Link>
+          <Link to="/add-review" style={styles.linkStyle}>Add a review</Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/about">About</Link>
+          <Link to="/about" style={styles.linkStyle}>About</Link>
         </MenuItem>
       </Menu>
       </Paper>
