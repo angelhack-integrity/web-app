@@ -19,7 +19,8 @@ let styles = {
       margin: 'auto'
     },
     dividerStyle: {
-      margin: "10px"
+      marginTop: 15,
+      marginBottom: 15
     }
 };
 
