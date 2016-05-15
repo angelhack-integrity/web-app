@@ -6,6 +6,7 @@ import Paper from 'material-ui/Paper';
 import { FormsyText } from 'formsy-material-ui/lib';
 import LoginPage from './LoginPage';
 import RaisedButton from 'material-ui/RaisedButton';
+import Divider from 'material-ui/Divider';
 
 let styles = {
     paperStyle: {
@@ -16,6 +17,9 @@ let styles = {
     submitStyle: {
       marginTop: 32,
       margin: 'auto'
+    },
+    dividerStyle: {
+      margin: "10px"
     }
 };
 
@@ -59,7 +63,7 @@ class AddReviewForm extends React.Component {
               style={styles.submitStyle}
             />
 
-            <hr />
+            <Divider style={styles.dividerStyle} />
 
             <LoginPage />
             
