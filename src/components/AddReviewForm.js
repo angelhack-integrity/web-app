@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import Formsy from 'formsy-react';
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import { FormsyText } from 'formsy-material-ui/lib';
@@ -11,13 +11,13 @@ let styles = {
     paperStyle: {
       width: 300,
       margin: 'auto',
-      padding: 20,
+      padding: 20
     },
     submitStyle: {
       marginTop: 32,
       margin: 'auto'
-    },
-  }
+    }
+};
 
 class AddReviewForm extends React.Component {
   
