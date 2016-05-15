@@ -130,5 +130,23 @@ export default {
 			}
 		});
 		return {saved};
+	},
+	list: function() {
+		let client = new Client('4713d84a-0bcb-419f-927f-a0c00bcd39a5', 'v1');
+		let index_name = 'review';
+		let ApiParams = {
+			"indexes": index_name,
+			"text": "*",
+			"total_results": true
+		};
+
+		let saved = client.call('querytextindex', ApiParams, function(res) {
+			if (res.ok) {
+				console.log(res);
+			} else {
+				return false;
+			}
+		});
+		return {saved};
 	}
 };

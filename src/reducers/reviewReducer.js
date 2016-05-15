@@ -1,5 +1,6 @@
-import {SAVE_REVIEW} from '../constants/actionTypes';
+import {SAVE_REVIEW, LIST_REVIEWS} from '../constants/actionTypes';
 import initialState from './initialState';
+import haveOnDemand from './haveOnDemand';
 
 // IMPORTANT: Note that with Redux, state should NEVER be changed.
 // State is considered immutable. Instead,
@@ -7,12 +8,14 @@ import initialState from './initialState';
 // Note that I'm using Object.assign to create a copy of current state
 // and update values on the copy.
 export default function reviewReducer(state = initialState.reviewState, action) {
-  // let newState;
+  let newState;
 
   switch (action.type) {
     case SAVE_REVIEW:
-      console.log(state);
-      return state;
+      return haveOnDemand.saveReview(state);
+
+    case LIST_REVIEWS:
+    	return haveOnDemand.list();
   
     default:
       return state; 
