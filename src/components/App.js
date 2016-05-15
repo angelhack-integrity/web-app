@@ -11,6 +11,8 @@ const App = (props) => {
       {' | '}
       <Link to="/add-review">Add a review</Link>
       {' | '}
+      <Link to="/login">Login</Link>
+      {' | '}
       <Link to="/about">About</Link>
       <br/>
       {props.children}
