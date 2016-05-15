@@ -8,6 +8,7 @@ import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import SocialSentimentVeryDissatisfied from 'material-ui/svg-icons/social/sentiment-very-dissatisfied';
 import SocialSentimentVerySatisfied from 'material-ui/svg-icons/social/sentiment-very-satisfied';
+import SocialSentimentSatisfied from 'material-ui/svg-icons/social/sentiment-satisfied'
 
 let style = {
 	containerStyle: {
@@ -33,7 +34,7 @@ const HomePage = () => {
         primaryText="Neil Wakefield"
         secondaryText="Excellent service, very proficient & very friendly"
         leftAvatar={<Avatar src="https://placekitten.com/100/100" />}
-        rightIcon={<SocialSentimentVeryDissatisfied />}
+        rightIcon={<SocialSentimentVerySatisfied />}
       />
       <ListItem
         primaryText="Michael Whittaker"
@@ -45,7 +46,7 @@ const HomePage = () => {
         primaryText="Paul Ellis"
         secondaryText="Very Good"
         leftAvatar={<Avatar src="https://placekitten.com/250/300" />}
-        rightIcon={<SocialSentimentVeryDissatisfied />}
+        rightIcon={<SocialSentimentSatisfied />}
       />
       <ListItem
         primaryText="Kate Kumra"
