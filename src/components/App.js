@@ -2,19 +2,36 @@ import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Menu, MenuItem } from 'material-ui';
+
+
+let styles = {
+    menuStyle: {
+      width: 300,
+      margin: 'auto',
+      padding: 20,
+      textAlign: 'center',
+      cssFloat: 'left'
+    }
+  }
 
 const App = (props) => {
   return (
     <MuiThemeProvider muiTheme={getMuiTheme()}>
     <div>
-      <IndexLink to="/">Home</IndexLink>
-      {' | '}
-      <Link to="/add-review">Add a review</Link>          
-      {' | '}
-      <Link to="/about">About</Link>
-      <br/>
-      {props.children}
-    </div>
+      <Menu desktop={true} autoWidth={false} style={styles.menuStyle}>
+        <MenuItem>
+          <IndexLink to="/">Home</IndexLink>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/add-review">Add a review</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/about">About</Link>
+        </MenuItem>
+      </Menu>
+      {props.children}      
+      </div>
     </MuiThemeProvider>
   );
 };

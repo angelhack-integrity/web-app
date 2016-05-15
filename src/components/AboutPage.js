@@ -1,15 +1,29 @@
 import React from 'react';
-import {Link} from 'react-router';
 import '../styles/about-page.css';
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Paper from 'material-ui/Paper';
+
+let styles = {
+    paperStyle: {
+      width: 300,
+      margin: 'auto',
+      padding: 20,
+  }
+}
 
 const AboutPage = () => {
   return (
-    <div>
-      <h2 className="alt-header">About</h2>
-      <p>
-        <Link to="/badlink">Click this bad link</Link> to see the 404 page.
-      </p>
-    </div>
+  	<MuiThemeProvider muiTheme={getMuiTheme()}>
+        <Paper style={styles.paperStyle}>
+        <div>
+		  <h2 className="alt-header">Are you thinking about taking this wonderful project further ?</h2>
+		  <p>
+			<a href="https://github.com/angelhack-integrity/web-app">Click this bad link</a> to see the project source.
+	      </p>
+	    </div>
+        </Paper>
+    </MuiThemeProvider>    
   );
 };
 
